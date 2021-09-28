@@ -6,12 +6,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+    
   </head>
   <body>
+  <%= render 'layouts/header' %>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "sample app", '#', id: "logo" %>
@@ -26,6 +29,7 @@
     </header>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
