@@ -12,6 +12,12 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  enum role: {
+    user: 0,
+    admin: 1,
+  }
+
+
   # Возвращает дайджест данной строки
   def self.digest(string)
     cost = if ActiveModel::SecurePassword.min_cost
