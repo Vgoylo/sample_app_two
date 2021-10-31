@@ -17,6 +17,9 @@ class User < ActiveRecord::Base
     admin: 1,
   }
 
+  def admin_role?
+    role == 1 
+  end
 
   # Возвращает дайджест данной строки
   def self.digest(string)
