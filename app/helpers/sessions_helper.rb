@@ -33,7 +33,7 @@ module SessionsHelper
 
   # Возвращает true, если пользователь вошел, иначе false.
   def logged_in?
-      !current_user.nil?
+    !current_user.nil?
   end
 
   # Осуществляет выход текущего пользователя.
