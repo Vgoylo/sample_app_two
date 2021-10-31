@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   }
 
   def admin_role?
-    role == 1 
+      role == 'admin'
   end
 
   # Возвращает дайджест данной строки
