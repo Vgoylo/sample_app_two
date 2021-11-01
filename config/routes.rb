@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-  get 'logout'  => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
   root 'static_pages#home'
-  
+
   resources :users
   resources :account_activations, only: [:edit]
 
